@@ -1,4 +1,7 @@
 .cardholder {
-  outline: 3px solid blue;
   margin: 0 auto;
+  background-color: #e5ddc8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

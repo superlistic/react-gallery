@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Card.css';
+import '../../main.css';
 const Card = ({ image }) => {
   const [clicked, setClicked] = useState(false);
 

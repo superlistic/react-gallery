@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap');
 .card {
-  outline: 3px solid red;
-}
-.card > * {
-  outline: 3px solid green;
   height: 400px;
   width: 400px;
+  background-color: #ffffff;
+  color: var(--clr-dark);
+  font-family: 'Dawning of a New Day', cursive;
+  margin: 2px;
+}
+.card > * {
   object-fit: cover;
+  height: 400px;
+  width: 400px;
+}
+.card > p {
+  font-size: calc(3rem);
+  line-height: 1;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
 }

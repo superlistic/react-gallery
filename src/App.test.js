@@ -32,7 +32,7 @@ test('renders elements', () => {
   expect(getByText(/Pagination/i)).toBeInTheDocument();
 });
 
-test('<Card /> ', () => {
+test('<Card />', () => {
   render(<Card image={image} />);
   const img = screen.getByTestId(`image_${image.id}`);
   const card = screen.getByTestId(`card_${image.id}`);
@@ -46,7 +46,7 @@ test('<Card /> ', () => {
 
 test('<Search />', async () => {
   render(<App />);
-  const textbox = screen.getByRole('textbox');
+  const textbox = screen.getByRole('combobox');
   const button = screen.getByRole('button');
   expect(textbox).toBeInTheDocument();
   expect(button).toBeInTheDocument();
