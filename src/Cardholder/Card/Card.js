@@ -14,7 +14,11 @@ const Card = ({ image }) => {
       {clicked ? (
         <p>{image.description}</p>
       ) : (
-        <img data-testid={`image_${image.id}`} src={image.urls.regular} />
+        <img
+          data-testid={`image_${image.id}`}
+          src={image.urls.regular}
+          alt={image.alt_description}
+        />
       )}
     </div>
   );

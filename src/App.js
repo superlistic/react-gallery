@@ -3,9 +3,10 @@ import { Nav } from './Nav';
 import { Search } from './Search';
 import { Cardholder } from './Cardholder';
 import { Pagination } from './Pagination';
-import './App.css';
+import Unsplash from './Unsplash';
 
-function App({ api }) {
+const api = new Unsplash('apikey');
+function App() {
   const [apiResponse, setApiResponse] = useState({ results: [] });
   return (
     <div className="App">

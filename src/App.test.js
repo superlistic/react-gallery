@@ -1,31 +1,33 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  // waitFor,
-  cleanup,
-} from '@testing-library/react';
+import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import { Card } from './Cardholder/Card';
 import { data } from './mockData';
 import { rest } from 'msw';
-import { setupServer } from 'msw-node';
+import { setupServer } from 'msw/node';
 
 const image = data.results[8];
 
-const api = {
-  search: () => {
-    return new Promise((resolve, reject) => {
-      resolve(data);
-    });
-  },
-};
+const server = setupServer(
+  rest.get('/search/photo', (req, res, ctx) => {
+    return res(ctx.json(data));
+  })
+);
+
+beforeAll(() => {
+  server.listen();
+});
+afterEach(() => {
+  server.resetHandlers();
+});
+afterAll(() => {
+  server.close();
+});
 
 afterEach(cleanup);
 
 test('renders elements', () => {
-  const { getByText } = render(<App api={api} />);
+  const { getByText } = render(<App />);
   expect(getByText(/nav/i)).toBeInTheDocument();
   expect(getByText(/Pagination/i)).toBeInTheDocument();
 });
@@ -42,20 +44,13 @@ test('<Card /> ', () => {
   ).toBeInTheDocument();
 });
 
-test('<Search />', () => {
-  render(<App api={api} />);
+test('<Search />', async () => {
+  render(<App />);
   const textbox = screen.getByRole('textbox');
   const button = screen.getByRole('button');
   expect(textbox).toBeInTheDocument();
   expect(button).toBeInTheDocument();
   fireEvent.change(textbox, { target: { value: 'dog' } });
-  // waitFor(() => {
-  //   fireEvent.click(button);
-  // })
-  //   .then(() => {
-  //     console.log('then');
-  //   })
-  //   .catch(() => {
-  //     console.log('hello?');
-  //   });
+  fireEvent.submit(screen.getByRole('button'));
+  expect(textbox.value).toEqual('dog');
 });
