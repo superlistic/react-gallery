@@ -1,11 +1,12 @@
 import React from 'react';
 import { Card } from './Card';
-
-const Cardholder = () => {
+import './Cardholder.css';
+const Cardholder = ({ apiResponse }) => {
   return (
-    <div>
-      Cardholder:
-      <Card />
+    <div className="cardholder">
+      {apiResponse.results.map(image => (
+        <Card key={image.id} image={image} />
+      ))}
     </div>
   );
 };

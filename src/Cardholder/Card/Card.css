@@ -1,0 +1,9 @@
+.card {
+  outline: 3px solid red;
+}
+.card > * {
+  outline: 3px solid green;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}

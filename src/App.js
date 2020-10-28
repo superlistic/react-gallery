@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Nav } from './Nav';
 import { Search } from './Search';
 import { Cardholder } from './Cardholder';
 import { Pagination } from './Pagination';
 import './App.css';
 
-function App() {
+function App({ api }) {
+  const [apiResponse, setApiResponse] = useState({ results: [] });
   return (
     <div className="App">
       <Nav />
-      <Search />
-      <Cardholder />
+      <Search
+        setApiRes={param => {
+          setApiResponse(param);
+        }}
+        api={api}
+      />
+      <Cardholder apiResponse={apiResponse} />
       <Pagination />
     </div>
   );
