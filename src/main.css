@@ -1,0 +1,11 @@
+:root {
+  --clr-bright: #db1f48;
+  --clr-dark: #004369;
+  --clr-accent: #01949a;
+  --clr-muted: #e5ddc8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
