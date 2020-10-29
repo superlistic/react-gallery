@@ -50,24 +50,27 @@ function App() {
             </Route>
             <Route exact path="/search">
               <Search
-                setSearchTerm={(param) => {
+                setSearchTerm={param => {
                   setSearchTerm(param);
                 }}
               />
               <Cardholder apiResponse={apiResponse} />
               <Pagination
                 page={page}
-                setPage={(currentPage) => setPage(currentPage)}
+                setPage={currentPage => setPage(currentPage)}
                 total={apiResponse.total_pages}
               />
             </Route>
             <Route exact path="/">
-              <Search
-                setSearchTerm={(param) => {
-                  setSearchTerm(param);
-                }}
+              <Greeting
+                cta={
+                  <Search
+                    setSearchTerm={param => {
+                      setSearchTerm(param);
+                    }}
+                  />
+                }
               />
-              <Greeting />
             </Route>
           </Switch>
           <Footer />

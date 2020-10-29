@@ -24,15 +24,15 @@
   height: 100%;
   background-color: white;
   text-align: center;
-  border-radius: 0.5rem;
-  transition: transform 0.8s;
+  border-radius: 1rem;
+  transition: transform 0.8s ease-in-out;
   cursor: pointer;
   transform-style: preserve-3d;
-  box-shadow: 5px 5px 20px black;
+  box-shadow: 0 0 5px var(--clr-shadow);
 }
 .card--selected .card__inner {
   cursor: pointer;
-  transform: rotateY(180deg);
+  transform: rotateX(179deg) rotateZ(175deg);
 }
 
 .card__front,
@@ -46,18 +46,25 @@
 }
 
 .card__back {
+  overflow: hidden;
   background-color: var(--clr-muted);
   cursor: pointer;
   transform: rotateY(180deg);
 }
 .card__back > p {
+  padding: 0.5rem;
   color: var(--clr-dark);
+  word-wrap: break-word;
 }
-@media screen and (max-width: 700px) {
+@media (max-width: 550px) {
   .card {
-    margin: 0.1rem;
+    margin: 0.5rem;
     perspective: 0;
     width: 95vmin;
     height: 95vmin;
+  }
+  .card--selected .card__inner {
+    cursor: pointer;
+    transform: rotateY(180deg);
   }
 }

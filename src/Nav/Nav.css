@@ -8,15 +8,13 @@
   justify-content: center;
   width: 100%;
   z-index: 10;
+  box-shadow: 0 0 5px var(--clr-subtle-shadow);
 }
 .nav__logo {
   justify-self: flex-start;
 }
 .nav__links {
-  /* #D30C7B */
-  background-color: var(--clr-bg);
   display: flex;
-  /* justify-content: center; */
   justify-self: center;
 }
 
@@ -24,4 +22,9 @@
   margin: 0 1rem;
   color: var(--clr-dark);
   text-decoration: none;
+}
+@media (max-width: 550) {
+  .nav {
+    height: 1rem;
+  }
 }

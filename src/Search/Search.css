@@ -9,6 +9,8 @@ input::-webkit-calendar-picker-indicator {
   background-color: transparent;
 }
 .search__form {
+  box-shadow: 0 0 5px var(--clr-subtle-shadow);
+  border-radius: 1rem;
   display: flex;
   width: 70vw;
   max-width: 60rem;

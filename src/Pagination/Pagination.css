@@ -11,11 +11,11 @@
 
 .pagination__arrow {
   font-size: calc(1rem + 2vmin);
-  fontsize: 10rem;
   cursor: pointer;
   margin: 0 1rem;
   pointer-events: all;
   color: var(--clr-dark);
   border-radius: 5rem;
+  background-color: var(--clr-trans);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.575);
 }
