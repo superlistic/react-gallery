@@ -3,9 +3,19 @@
   --clr-dark: #004369;
   --clr-accent: #01949a;
   --clr-muted: #e5ddc8;
+  --clr-bg: white;
 }
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
+}
+
+.app {
+  /* height: 100vh; */
+  min-height: 100vh;
+  /* background-color: violet; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }

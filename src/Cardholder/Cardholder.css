@@ -1,7 +1,12 @@
 .cardholder {
-  margin: 0 auto;
-  background-color: #e5ddc8;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+  .cardholder {
+    flex-direction: column;
+    align-items: center;
+  }
 }

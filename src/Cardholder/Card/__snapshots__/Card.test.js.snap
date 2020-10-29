@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders elements 1`] = `
+<div
+  className="card"
+  data-testid="card_NodtnCsLdTE"
+  onClick={[Function]}
+>
+  <div
+    className="card__inner"
+  >
+    <div
+      className="card__front"
+    >
+      <img
+        alt="brown Scottish fold in brown thick-pile blanket"
+        src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+      />
+    </div>
+    <div
+      className="card__back"
+    >
+      <p>
+        Crouching Tiger, Hidden Dragon.
+Photo of a kitten named William hiding under a plaid
+      </p>
+    </div>
+  </div>
+</div>
+`;

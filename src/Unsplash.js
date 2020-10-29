@@ -3,9 +3,9 @@ function Unsplash(key) {
   this.key = key;
   this.baseUrl = 'https://api.unsplash.com/';
 
-  this.search = async term => {
+  this.search = async (term, pageNum) => {
     const response = await fetch(
-      `https://api.unsplash.com/search/photos/?query=${term}`,
+      `https://api.unsplash.com/search/photos/?query=${term}&page=${pageNum}&per_page=30`,
       {
         headers: {
           Authorization:

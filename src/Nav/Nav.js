@@ -6,9 +6,18 @@ import './Nav.css';
 const Nav = () => {
   return (
     <div className="nav">
-      <Link to="/">Home</Link>
-
-      <Link to="/about">About</Link>
+      <div className="nav__logo">LOGO</div>
+      <div className="nav__links">
+        <Link className="nav__item" to="/">
+          Home
+        </Link>
+        <Link className="nav__item" to="/about">
+          About
+        </Link>
+        <Link className="nav__item" to="/search">
+          Search
+        </Link>
+      </div>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { Card } from './Cardholder/Card';
 import { data } from './mockData';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import React from 'react';
+import renderer from 'react-test-renderer';
 
 const image = data.results[8];
 
@@ -27,9 +29,8 @@ afterAll(() => {
 afterEach(cleanup);
 
 test('renders elements', () => {
-  const { getByText } = render(<App />);
-  expect(getByText(/nav/i)).toBeInTheDocument();
-  expect(getByText(/Pagination/i)).toBeInTheDocument();
+  const tree = renderer.create(<App />).toJSON();
+  expect(tree).toMatchSnapshot();
 });
 
 test('<Card />', () => {
@@ -47,10 +48,10 @@ test('<Card />', () => {
 test('<Search />', async () => {
   render(<App />);
   const textbox = screen.getByRole('combobox');
-  const button = screen.getByRole('button');
+  const button = screen.getByTestId('search__button');
   expect(textbox).toBeInTheDocument();
   expect(button).toBeInTheDocument();
   fireEvent.change(textbox, { target: { value: 'dog' } });
-  fireEvent.submit(screen.getByRole('button'));
+  fireEvent.submit(button);
   expect(textbox.value).toEqual('dog');
 });

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import './Search.css';
 import '../main.css';
@@ -10,7 +11,7 @@ const getHist = () => {
 const updateHist = (newTerm, cb) => {
   const history = getHist();
   const histIndex = history.findIndex(
-    s => s.toLowerCase() === newTerm.toLowerCase()
+    (s) => s.toLowerCase() === newTerm.toLowerCase()
   );
   if (histIndex < 0) {
     history.push(newTerm);
@@ -25,33 +26,55 @@ const updateHist = (newTerm, cb) => {
   cb(history);
 };
 
-const Search = ({ setApiRes, api }) => {
+const Search = ({ setSearchTerm }) => {
   const [hist, setHist] = useState(getHist());
-  const submit = async ev => {
-    ev.preventDefault();
-    const response = await api.search(ev.target[0].value);
-    updateHist(ev.target[0].value, setHist);
-    ev.target[0].value = '';
-    setApiRes(response);
+  const [input, setInput] = useState('');
+  const submit = (e) => {
+    // e.preventDefault();
+    updateHist(input, setHist);
+    setSearchTerm(input);
   };
+
+  useEffect(() => {
+    return () => {
+      setInput('');
+    };
+  }, []);
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
+
+  const noOp = () => {};
+
   return (
     <div className="search">
-      <form className="search__form" onSubmit={submit}>
+      <form className="search__form">
         <input
+          onChange={(e) => handleChange(e)}
           className="search__text-input"
           type="text"
           list="search-history"
-          placeholder="search for 'cats'"
+          // placeholder="Search for awesomeness"
+          placeholder="Find stuff"
+          value={input}
         />
         <datalist id="search-history">
-          {hist.map(option => (
+          {hist.map((option) => (
             <option key={option} value={option} />
           ))}
         </datalist>
-
-        <button type="submit" className="search__button">
-          <SearchIcon />
-        </button>
+        <Link
+          data-testid="search__button"
+          to="/search"
+          className="search__button"
+          onClick={submit}
+          // onKeyPress={(e) => {
+          //   e.charCode === 13 ? submit(e) : noOp();
+          // }}
+        >
+          <SearchIcon className="search__icon" fontSize="large" />
+        </Link>
       </form>
     </div>
   );
