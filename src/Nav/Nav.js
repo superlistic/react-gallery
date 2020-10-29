@@ -6,7 +6,7 @@ import './Nav.css';
 const Nav = () => {
   return (
     <div className="nav">
-      <div className="nav__logo">LOGO</div>
+      <div className="nav__logo">re:splash</div>
       <div className="nav__links">
         <Link className="nav__item" to="/">
           Home

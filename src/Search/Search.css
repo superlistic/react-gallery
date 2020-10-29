@@ -45,7 +45,7 @@ input::-webkit-calendar-picker-indicator {
 }
 .search__icon {
   display: block;
-  color: var(--clr-bright);
+  color: var(--clr-accent);
   margin: 1.5rem;
 }
 @media (max-width: 450px) {

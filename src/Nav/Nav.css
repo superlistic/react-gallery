@@ -11,6 +11,7 @@
   box-shadow: 0 0 5px var(--clr-subtle-shadow);
 }
 .nav__logo {
+  color: var(--clr-bright);
   justify-self: flex-start;
 }
 .nav__links {
@@ -22,9 +23,4 @@
   margin: 0 1rem;
   color: var(--clr-dark);
   text-decoration: none;
-}
-@media (max-width: 550) {
-  .nav {
-    height: 1rem;
-  }
 }

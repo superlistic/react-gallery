@@ -5,9 +5,19 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-size: cover;
   background-image: url('https://unsplash.com/photos/mMSNRZvaiCU/download?force=true&w=1920');
+  background-size: cover;
+  background-position: center center;
 }
-.greeting__text {
+.greeting__heading,
+.greeting__subheading {
+  text-align: center;
   color: var(--clr-bright);
+  margin: 0 2rem;
+}
+.greeting__heading {
+  font-size: calc(2rem + 5vmin);
+}
+.greeting__subheading {
+  font-size: calc(1rem + 2.5vmin);
 }

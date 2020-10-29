@@ -32,7 +32,7 @@
 }
 .card--selected .card__inner {
   cursor: pointer;
-  transform: rotateX(180deg) rotateZ(177deg);
+  transform: rotateY(180deg);
 }
 
 .card__front,

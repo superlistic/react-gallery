@@ -1,20 +1,41 @@
 .about {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;    */
   align-items: center;
-  margin: 1rem 0;
 }
 
 .about__title {
   font-size: 2rem;
-  /* margin: 1rem 0; */
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .about__image {
   max-height: 60vh;
 }
 .about__description {
-  margin: 2rem 0;
+  margin: 2rem 2rem;
+  max-width: 40rem;
+}
+@media (min-width: 700px) {
+  .about {
+    display: grid;
+    grid-template-areas:
+      'title image'
+      'text image';
+    grid-template-rows: 10rem auto;
+    grid-template-columns: auto auto;
+  }
+
+  .about__title {
+    grid-area: 'title';
+  }
+  .about__description {
+    grid-area: 'text';
+  }
+  .about__image {
+    grid-area: 'image';
+    height: 100%;
+  }
 }

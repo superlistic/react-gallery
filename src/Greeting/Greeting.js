@@ -5,8 +5,10 @@ import './Greeting.css';
 const Greeting = ({ cta }) => {
   return (
     <div className="greeting">
-      <h5 className="greeting__text">Welcome to our React Gallery!</h5>
-      <p className="greeting__text">Search below for awesome pictures</p>
+      <h1 className="greeting__heading">re:splash</h1>
+      <h2 className="greeting__subheading">
+        "By the power of unsplash you can.."
+      </h2>
       {cta}
     </div>
   );
