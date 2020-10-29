@@ -9,7 +9,7 @@ input::-webkit-calendar-picker-indicator {
   background-color: transparent;
 }
 .search__form {
-  box-shadow: 0 0 5px var(--clr-subtle-shadow);
+  /* box-shadow: 2px 4px 8px var(--clr-bright); */
   border-radius: 1rem;
   display: flex;
   width: 70vw;
@@ -26,6 +26,7 @@ input::-webkit-calendar-picker-indicator {
   border: 2px solid var(--clr-dark);
   height: 100%;
   font-size: 1.3rem;
+  box-shadow: 2px 4px 8px var(--clr-subtle-shadow) inset;
   /* text-align: start; */
   /* padding-left: 3rem; */
 }

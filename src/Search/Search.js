@@ -11,7 +11,7 @@ const getHist = () => {
 const updateHist = (newTerm, cb) => {
   const history = getHist();
   const histIndex = history.findIndex(
-    (s) => s.toLowerCase() === newTerm.toLowerCase()
+    s => s.toLowerCase() === newTerm.toLowerCase()
   );
   if (histIndex < 0) {
     history.push(newTerm);
@@ -29,7 +29,7 @@ const updateHist = (newTerm, cb) => {
 const Search = ({ setSearchTerm }) => {
   const [hist, setHist] = useState(getHist());
   const [input, setInput] = useState('');
-  const submit = (e) => {
+  const submit = e => {
     // e.preventDefault();
     updateHist(input, setHist);
     setSearchTerm(input);
@@ -41,17 +41,15 @@ const Search = ({ setSearchTerm }) => {
     };
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setInput(e.target.value);
   };
-
-  const noOp = () => {};
 
   return (
     <div className="search">
       <form className="search__form">
         <input
-          onChange={(e) => handleChange(e)}
+          onChange={e => handleChange(e)}
           className="search__text-input"
           type="text"
           list="search-history"
@@ -60,7 +58,7 @@ const Search = ({ setSearchTerm }) => {
           value={input}
         />
         <datalist id="search-history">
-          {hist.map((option) => (
+          {hist.map(option => (
             <option key={option} value={option} />
           ))}
         </datalist>

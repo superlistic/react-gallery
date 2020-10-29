@@ -26,7 +26,7 @@ function App() {
       };
       fetchData();
     }
-  }, [searchTerm]);
+  }, [searchTerm, page]);
 
   useEffect(() => {
     if (searchTerm !== '') {
@@ -37,7 +37,7 @@ function App() {
       };
       fetchData();
     }
-  }, [page]);
+  }, [page, searchTerm]);
 
   return (
     <>
