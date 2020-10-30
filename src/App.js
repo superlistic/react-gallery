@@ -18,10 +18,10 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    console.log(searchTerm, page);
+    // console.log(searchTerm, page);
     if (searchTerm !== '') {
       const fetchData = async () => {
-        console.log('SEARCHTERM TRIGGERED');
+        // console.log('SEARCHTERM TRIGGERED');
         const res = await api.search(searchTerm, page);
         setApiResponse(res);
       };
@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     if (searchTerm !== '') {
       const fetchData = async () => {
-        console.log('PAGE TRIGGERED');
+        // console.log('PAGE TRIGGERED');
         const res = await api.search(searchTerm, page);
         setApiResponse(res);
       };
@@ -51,14 +51,14 @@ function App() {
             </Route>
             <Route exact path="/search">
               <Search
-                setSearchTerm={(param) => {
+                setSearchTerm={param => {
                   setSearchTerm(param);
                 }}
               />
               <Cardholder apiResponse={apiResponse} />
               <Pagination
                 page={page}
-                setPage={(currentPage) => setPage(currentPage)}
+                setPage={currentPage => setPage(currentPage)}
                 total={apiResponse.total_pages}
               />
             </Route>
@@ -66,7 +66,7 @@ function App() {
               <Greeting
                 cta={
                   <Search
-                    setSearchTerm={(param) => {
+                    setSearchTerm={param => {
                       setSearchTerm(param);
                     }}
                   />
