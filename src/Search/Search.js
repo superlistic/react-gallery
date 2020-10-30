@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import './Search.css';
@@ -11,7 +11,7 @@ const getHist = () => {
 const updateHist = (newTerm, cb) => {
   const history = getHist();
   const histIndex = history.findIndex(
-    s => s.toLowerCase() === newTerm.toLowerCase()
+    (s) => s.toLowerCase() === newTerm.toLowerCase()
   );
   if (histIndex < 0) {
     history.push(newTerm);
@@ -29,11 +29,13 @@ const updateHist = (newTerm, cb) => {
 const Search = ({ setSearchTerm }) => {
   const [hist, setHist] = useState(getHist());
   const [input, setInput] = useState('');
-  const submit = e => {
-    // e.preventDefault();
-    updateHist(input, setHist);
-    setSearchTerm(input);
-  };
+  const submit = useCallback(
+    (e) => {
+      setSearchTerm(input);
+      updateHist(input, setHist);
+    },
+    [input, setSearchTerm]
+  );
 
   useEffect(() => {
     return () => {
@@ -41,24 +43,35 @@ const Search = ({ setSearchTerm }) => {
     };
   }, []);
 
-  const handleChange = e => {
+  const noOp = (e) => {};
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      e.keyCode === 13 ? submit(e) : noOp(e);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [submit]);
+
+  const handleChange = (e) => {
     setInput(e.target.value);
   };
 
   return (
     <div className="search">
-      <form className="search__form">
+      <div className="search__form">
         <input
-          onChange={e => handleChange(e)}
+          onChange={(e) => handleChange(e)}
           className="search__text-input"
           type="text"
           list="search-history"
-          // placeholder="Search for awesomeness"
           placeholder="Find stuff"
           value={input}
         />
         <datalist id="search-history">
-          {hist.map(option => (
+          {hist.map((option) => (
             <option key={option} value={option} />
           ))}
         </datalist>
@@ -67,13 +80,10 @@ const Search = ({ setSearchTerm }) => {
           to="/search"
           className="search__button"
           onClick={submit}
-          // onKeyPress={(e) => {
-          //   e.charCode === 13 ? submit(e) : noOp();
-          // }}
         >
           <SearchIcon className="search__icon" fontSize="large" />
         </Link>
-      </form>
+      </div>
     </div>
   );
 };

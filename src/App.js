@@ -18,6 +18,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
+    console.log(searchTerm, page);
     if (searchTerm !== '') {
       const fetchData = async () => {
         console.log('SEARCHTERM TRIGGERED');
@@ -50,14 +51,14 @@ function App() {
             </Route>
             <Route exact path="/search">
               <Search
-                setSearchTerm={param => {
+                setSearchTerm={(param) => {
                   setSearchTerm(param);
                 }}
               />
               <Cardholder apiResponse={apiResponse} />
               <Pagination
                 page={page}
-                setPage={currentPage => setPage(currentPage)}
+                setPage={(currentPage) => setPage(currentPage)}
                 total={apiResponse.total_pages}
               />
             </Route>
@@ -65,7 +66,7 @@ function App() {
               <Greeting
                 cta={
                   <Search
-                    setSearchTerm={param => {
+                    setSearchTerm={(param) => {
                       setSearchTerm(param);
                     }}
                   />
