@@ -3,24 +3,27 @@ import './Card.css';
 import '../../main.css';
 const Card = ({ image }) => {
   const [clicked, setClicked] = useState(false);
-
+  const className = clicked ? 'card card--selected' : 'card';
   return (
     <div
-      className="card"
+      className={className}
       data-testid={`card_${image.id}`}
       onClick={() => {
         setClicked(!clicked);
       }}
     >
-      {clicked ? (
-        <p>{image.description}</p>
-      ) : (
-        <img
-          data-testid={`image_${image.id}`}
-          src={image.urls.regular}
-          alt={image.alt_description}
-        />
-      )}
+      <div className="card__inner">
+        <div className="card__front">
+          <img
+            className="card__image"
+            src={image.urls.regular}
+            alt={image.alt_description}
+          />
+        </div>
+        <div className="card__back">
+          <p>{image.description}</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,43 @@
+.about {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about__image {
+  max-height: 60vh;
+}
+.about__description {
+  margin: 2rem 2rem;
+  max-width: 40rem;
+}
+@media (min-width: 700px) {
+  .about {
+    display: grid;
+    grid-template-areas:
+      'title image'
+      'text image';
+    grid-template-rows: 10rem auto;
+    grid-template-columns: auto auto;
+  }
+
+  .about__title {
+    grid-area: 'title';
+  }
+  .about__description {
+    grid-area: 'text';
+  }
+  .about__image {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    grid-area: 'image';
+    height: 100%;
+  }
+}

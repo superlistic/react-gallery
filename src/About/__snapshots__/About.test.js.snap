@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders elements 1`] = `
+<div>
+  <h1>
+    About us
+  </h1>
+  <p>
+    blalblabla
+  </p>
+  <img
+    src="https://24slides.com/presentbetter/wp-content/uploads/2018/12/company-profile-presentation-tips.jpg"
+  />
+</div>
+`;

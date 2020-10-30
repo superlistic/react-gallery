@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders elements 1`] = `
+<div
+  className="cardholder"
+>
+  <div
+    className="card"
+    data-testid="card_Uk30T1yfVPI"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt={null}
+          src="https://images.unsplash.com/photo-1601758174039-617983b8cdd9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_7AIDE8PrvA0"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="silver tabby kitten on floor"
+          src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_9SWHIgu8A8k"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="shallow focus photography of brown tabby cat"
+          src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          Cute kitty
+
+Find me on instagram: https://www.instagram.com/ramche_/
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_gKXKBY-C-Dk"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="black and white cat lying on brown bamboo chair inside room"
+          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          Gipsy the Cat was sitting on a bookshelf one afternoon and just stared right at me, kinda saying: “Will you take a picture already?”
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_7GX5aICb5i4"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="brown tabby cat"
+          src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          bean the cat
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_75715CVEJhI"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="selective focus photography of orange and white cat on brown table"
+          src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          One of my cats, Vladimir. He is from Russia! He has an instagram if you'd like to see more of him: @Vladimir_Purtin
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_OzAeZPNsLXk"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="selective focus photography of Russian Blue cat"
+          src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_rW-I87aPY5Y"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="white butterfly resting on cat's nose"
+          src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          Instant
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_NodtnCsLdTE"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="brown Scottish fold in brown thick-pile blanket"
+          src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          Crouching Tiger, Hidden Dragon.
+Photo of a kitten named William hiding under a plaid
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    data-testid="card_mJaD10XeD7w"
+    onClick={[Function]}
+  >
+    <div
+      className="card__inner"
+    >
+      <div
+        className="card__front"
+      >
+        <img
+          alt="brown tabby cat on white stairs"
+          src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3NTg1Mn0"
+        />
+      </div>
+      <div
+        className="card__back"
+      >
+        <p>
+          Larry
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -3,9 +3,22 @@
   --clr-dark: #004369;
   --clr-accent: #01949a;
   --clr-muted: #e5ddc8;
+  --clr-bg: rgba(255, 255, 255, 0.815);
+  --clr-trans: rgba(255, 255, 255, 0.438);
+  --clr-shadow: rgba(0, 0, 0, 0.753);
+  --clr-subtle-shadow: rgba(0, 0, 0, 0.301);
 }
 * {
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
+}
+
+.app {
+  /* height: 100vh; */
+  min-height: 100vh;
+  /* background-color: violet; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
