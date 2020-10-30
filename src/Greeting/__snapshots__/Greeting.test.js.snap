@@ -1,9 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders elements 1`] = `
-<div>
-  <p>
-    Greeting
-  </p>
+<div
+  className="greeting"
+>
+  <h1
+    className="greeting__heading"
+  >
+    re:splash
+  </h1>
+  <h2
+    className="greeting__subheading"
+  >
+    "By the power of unsplash you can.."
+  </h2>
 </div>
 `;

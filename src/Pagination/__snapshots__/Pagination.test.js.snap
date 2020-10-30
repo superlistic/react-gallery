@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders elements 1`] = `
-<div>
+<div
+  className="pagination"
+>
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root pagination__arrow"
     focusable="false"
     onClick={[Function]}
+    style={
+      Object {
+        "fontSize": "5.5rem",
+      }
+    }
     viewBox="0 0 24 24"
   >
     <path
@@ -15,9 +22,14 @@ exports[`renders elements 1`] = `
   </svg>
   <svg
     aria-hidden={true}
-    className="MuiSvgIcon-root"
+    className="MuiSvgIcon-root pagination__arrow"
     focusable="false"
     onClick={[Function]}
+    style={
+      Object {
+        "fontSize": "5.5rem",
+      }
+    }
     viewBox="0 0 24 24"
   >
     <path

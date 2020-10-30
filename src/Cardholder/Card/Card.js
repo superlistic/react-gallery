@@ -16,6 +16,7 @@ const Card = ({ image }) => {
         <div className="card__front">
           <img
             className="card__image"
+            data-testid={`image_${image.id}`}
             src={image.urls.regular}
             alt={image.alt_description}
           />
